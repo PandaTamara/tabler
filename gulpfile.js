@@ -16,10 +16,6 @@ gulp.task('styles', function () {
             cascade: false
         }))
         .pipe(rename('dashboard.css'))
-        .pipe(gulp.dest('src/assets/css/'))
-
-        .pipe(rtlcss())
-        .pipe(rename('dashboard.rtl.css'))
         .pipe(gulp.dest('src/assets/css/'));
 });
 
