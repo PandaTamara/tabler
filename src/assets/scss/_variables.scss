@@ -79,18 +79,8 @@ $light: $gray-100;
 $dark: $gray-800;
 
 $colors: (
-	//"blue": $blue,
-	//"azure": $azure,
-	//"indigo": $indigo,
-	//"purple": $purple,
-	//"pink": $pink,
 	"red": $red,
-	//"orange": $orange,
-	//"yellow": $yellow,
-	//"lime": $lime,
 	"green": $green,
-	//"teal": $teal,
-	//"cyan": $cyan,
 	"white": $white,
 	"gray": $gray-600,
 	"gray-dark": $gray-800
@@ -107,20 +97,23 @@ $theme-colors: (
 	"dark": $dark
 );
 
+/**
+	Из этого массива собираются примеры цветов,
+	которые используются в шаблоне
+ */
+$themes-colors: (
+	"blue" : #467fcf,
+	"purple": #4646CF
+);
+
 $social-colors: (
 	"facebook": #3b5998,
 	"twitter": #1da1f2,
 	"google": #dc4e41,
 	"youtube": #f00,
-	//"vimeo": #1ab7ea,
-	//"dribbble": #ea4c89,
-	"github": #181717,
 	"instagram": #e4405f,
-	"pinterest": #bd081c,
 	"vk": #6383a8,
-	"rss": #ffa500,
-	//"flickr": #0063dc,
-	//"bitbucket": #0052cc,
+	"rss": #ffa500
 );
 
 $body-bg: #f5f7fb;

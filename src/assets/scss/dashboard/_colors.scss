@@ -6,3 +6,13 @@
 	@include bg-variant(".bg-#{$color}-darker", mix($value, #000, 40%));
 	@include bg-variant(".bg-#{$color}-darkest", mix($value, #000, 20%));
 }
+
+/**
+	Цвета для разных цветовых схем
+	Используется в дизайнере шаблона
+ */
+@each $vendor, $themes-color in $themes-colors {
+	.bg-theme-#{$vendor} {
+		background-color: #{$themes-color};
+	}
+}
