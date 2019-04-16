@@ -5,16 +5,19 @@
 		th {
 			border-top: 0;
 			border-bottom-width: 1px;
-			padding-top: .5rem;
-			padding-bottom: .5rem;
+			padding-top: .9rem;
+			padding-bottom: .9rem;
 		}
 	}
 
 	th {
 		color: $text-muted;
-		text-transform: uppercase;
 		font-size: $h6-font-size;
-		font-weight: 400;
+		font-weight: 700;
+	}
+
+	td {
+		padding: .9rem;
 	}
 }
 

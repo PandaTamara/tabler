@@ -10,6 +10,7 @@
 
 	.breadcrumb-item {
 		color: $text-muted;
+		vertical-align: top;
 
 		&.active {
 			color: $text-muted-dark;

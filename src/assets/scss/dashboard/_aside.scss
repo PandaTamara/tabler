@@ -20,17 +20,14 @@
 }
 
 .aside-body {
-	padding: 1.5rem;
 	flex: 1 1 auto;
-	overflow: auto;
+	overflow: visible;
 }
 
 .aside-footer {
-	padding: 1rem 1.5rem;
 	border-top: 1px solid $border-color;
 }
 
 .aside-header {
-	padding: 1rem 1.5rem;
-	border-bottom: 1px solid $border-color;
+	position: relative;
 }

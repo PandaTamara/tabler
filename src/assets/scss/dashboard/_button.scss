@@ -67,6 +67,11 @@
 	font-size: px2rem(16px);
 	min-width: px2rem(44px);
 	font-weight: 400;
+
+	i {
+		font-size: 1.1rem;
+		vertical-align: -1px;
+	}
 }
 
 .btn-list {

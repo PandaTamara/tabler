@@ -1,8 +1,13 @@
 .example {
-	padding: 1.5rem;
+	padding: 3rem;
 	border: 1px solid $border-color;
 	border-radius: 3px 3px 0 0;
 	font-size: px2rem(15px);
+	margin: 2rem 0;
+
+	> :last-child {
+		margin-bottom: 0;
+	}
 }
 
 .example-bg {

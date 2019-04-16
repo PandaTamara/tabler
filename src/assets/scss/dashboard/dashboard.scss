@@ -11,7 +11,9 @@
 @import 'header';
 @import 'footer';
 @import 'colors';
-@import 'text';
+
+@import "utilities/text";
+
 @import 'utilities';
 
 @import 'nav';
@@ -28,41 +30,29 @@
 @import 'list';
 @import 'list-group';
 @import 'avatar';
-@import 'product';
 @import 'progress';
 @import 'icon';
 @import 'image';
 @import 'link';
 @import 'media';
 @import 'form';
-@import 'sparkline';
 @import 'social';
 @import 'maps';
 @import 'statuses';
-//@import 'charts';
 @import 'chips';
 @import 'stamp';
 @import 'chat';
 @import 'example';
 @import 'tag';
-//@import 'syntax';
 @import 'infobox';
 @import 'carousel';
-//@import 'datatables';
-@import 'bottombar';
 
 @import 'forms/custom-range';
 @import 'forms/custom-selectgroup';
 @import 'forms/custom-switch';
 @import 'forms/custom-imagecheck';
 @import 'forms/custom-colorinput';
+@import 'forms/custom-fileinput';
 
-//@import 'timeline';
-
-//@import 'browser';
-//@import 'flag';
-//@import 'payments';
-//@import 'jvectormap';
 @import 'selectize';
 
-//@import 'fonts/feather';
