@@ -8,9 +8,12 @@
 .modal-header {
   .btn {
     margin: .25rem -.75rem .25rem 0;
-    color: $gray-300;
 
-    :hover {
+    i {
+      color: $gray-300;
+    }
+
+    :hover i {
       color: $gray-400;
     }
   }

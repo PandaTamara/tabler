@@ -8,7 +8,6 @@ $enable-hover-media-query: false;
 $enable-grid-classes: true;
 $enable-print-styles: true;
 
-$link-hover-decoration: none;
 
 //Fonts
 $font-family-base: Arial, sans-serif;
@@ -127,6 +126,11 @@ $social-colors: (
 $body-bg: #f5f7fb;
 $body-color: $gray-700;
 
+// Link
+$link-color: $primary;
+$link-hover-color: darken($link-color, 15%);
+$link-hover-decoration: none;
+
 // Code
 $code-font-size: 85%;
 $code-color: inherit;
@@ -154,11 +158,16 @@ $btn-line-height-lg: (26/16);
 $btn-transition: color .3s ease-in-out, background-color .3s ease-in-out, border-color .3s ease-in-out, box-shadow .3s ease-in-out;
 
 $input-btn-focus-width: 2px;
+$input-btn-focus-color: rgba($primary, .25);
+$input-btn-focus-box-shadow:  0 0 0 $input-btn-focus-width $input-btn-focus-color;
 
 $input-disabled-bg: $gray-100;
 
-$input-focus-border-color: #1991eb;
-$custom-select-focus-border-color: #1991eb;
+$input-focus-width: 2px;
+$input-focus-border-color: $primary;
+$input-focus-box-shadow:  0 0 0 $input-focus-width rgba($input-focus-border-color, .25) ;
+
+$custom-select-focus-border-color: $primary;
 
 // Borders
 $border-width: 1px;
@@ -314,3 +323,8 @@ $pagination-disabled-color: $gray-400;
 
 // Navs
 $nav-tabs-link-active-bg: transparent;
+
+// Forms
+$custom-switch-width: 2.25rem;
+$custom-switch-height: 1.25rem;
+$custom-switch-padding: 1px;
