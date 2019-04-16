@@ -1,0 +1,17 @@
+.modal-body {
+
+  > .form-group:last-child {
+    margin-bottom: 0;
+  }
+}
+
+.modal-header {
+  .btn {
+    margin: .25rem -.75rem .25rem 0;
+    color: $gray-300;
+
+    :hover {
+      color: $gray-400;
+    }
+  }
+}

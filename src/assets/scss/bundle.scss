@@ -1,6 +1,15 @@
 /**
- * Dashboard UI
+ * [rms] Corporation
  */
+
+// Системные переменные Bootstrap
+@import 'bootstrap/required';
+
+// Переопределение системных переменных Bootstrap для шаблона
 @import 'variables';
-@import '../../../node_modules/bootstrap/scss/bootstrap.scss';
-@import 'dashboard/dashboard';
+
+// Опциональные части Bootstrap
+@import 'bootstrap/optional';
+
+// Адаптация Bootstrap под тему rmsCorporation
+@import 'theme/theme';

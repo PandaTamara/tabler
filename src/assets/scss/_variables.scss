@@ -3,6 +3,7 @@ $enable-rounded: true;
 $enable-shadows: false;
 $enable-gradients: false;
 $enable-transitions: true;
+$enable-prefers-reduced-motion-media-query:   false;
 $enable-hover-media-query: false;
 $enable-grid-classes: true;
 $enable-print-styles: true;
@@ -60,8 +61,6 @@ $orange: #fd9644;
 $yellow: #f1c40f;
 $lime: #7bd235;
 $green: #5eba00;
-$teal: #2bcbba;
-$cyan: #17a2b8;
 
 
 $text-muted: #9aa0ac;
@@ -78,6 +77,9 @@ $danger: $red;
 $light: $gray-100;
 $dark: $gray-800;
 
+/**
+	Цвета, которые будут использоваться
+*/
 $colors: (
 	"red": $red,
 	"green": $green,
@@ -85,6 +87,12 @@ $colors: (
 	"gray": $gray-600,
 	"gray-dark": $gray-800
 );
+
+/**
+	Исключает стандартные цвета Bootstrap
+ */
+$colors: map-remove($colors, "indigo", "blue", "purple", "pink", "orange", "yellow", "teal", "cyan");
+
 
 $theme-colors: (
 	"primary": $primary,
@@ -101,7 +109,7 @@ $theme-colors: (
 	Из этого массива собираются примеры цветов,
 	которые используются в шаблоне
  */
-$themes-colors: (
+$themes: (
 	"blue" : #467fcf,
 	"purple": #4646CF
 );
@@ -142,6 +150,8 @@ $btn-line-height-sm: (16/12);
 
 $input-line-height-lg: (26/18);
 $btn-line-height-lg: (26/16);
+
+$btn-transition: color .3s ease-in-out, background-color .3s ease-in-out, border-color .3s ease-in-out, box-shadow .3s ease-in-out;
 
 $input-btn-focus-width: 2px;
 

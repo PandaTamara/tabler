@@ -1,0 +1,26 @@
+/**
+  Фон с градиентом от слегка затемненного цвета, до слегка осветленного
+ */
+@each $color, $value in $theme-colors {
+  .bg-gradient-#{$color} {
+    @include gradient-directional(rgba(darken(saturate($value, 20%), 17%), .75), rgba($value,.75), 30deg);
+  }
+}
+
+/**
+  Фон с градиентом от цвета к прозрачному
+ */
+@each $color, $value in $theme-colors {
+  .bg-gradient-#{$color}-transparent {
+    @include gradient-x(rgba($value, 1), rgba(white, 0), 0%, 100%);
+  }
+}
+
+/**
+	Основные цвета цветовые схем темы rmsCorporation
+ */
+@each $vendor, $themes-color in $themes {
+  .bg-theme-#{$vendor} {
+    background-color: #{$themes-color};
+  }
+}

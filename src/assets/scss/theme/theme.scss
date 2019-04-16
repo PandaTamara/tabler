@@ -12,6 +12,7 @@
 @import 'footer';
 @import 'colors';
 
+@import "utilities/background";
 @import "utilities/text";
 
 @import 'utilities';
@@ -44,8 +45,7 @@
 @import 'chat';
 @import 'example';
 @import 'tag';
-@import 'infobox';
-@import 'carousel';
+@import 'modal';
 
 @import 'forms/custom-range';
 @import 'forms/custom-selectgroup';
