@@ -1,13 +1,14 @@
 /**
  * [rms] Corporation
  */
+
+// Переопределение системных переменных Bootstrap для шаблона
 @import 'variables';
 
 // Системные переменные Bootstrap
 @import 'bootstrap/required';
 
-// Переопределение системных переменных Bootstrap для шаблона
-@import 'variables';
+//@import 'variables';
 
 // Опциональные части Bootstrap
 @import 'bootstrap/optional';
