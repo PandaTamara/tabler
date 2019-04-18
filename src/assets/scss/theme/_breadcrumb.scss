@@ -9,11 +9,36 @@
 	}
 
 	.breadcrumb-item {
-		color: $text-muted;
+		color: $white;
 		vertical-align: top;
 
 		&.active {
 			color: $text-muted-dark;
+		}
+	}
+}
+
+.breadcrumb {
+	background-color: transparent;
+	border-radius: 0;
+	padding: 1rem;
+	margin-bottom: 0;
+	text-transform: uppercase;
+	font-size: $small-font-size;
+
+	.breadcrumb-item {
+		color: rgba($white, .75);
+
+		a {
+			color: $white;
+		}
+
+		+ .breadcrumb-item {
+			padding-left: 0;
+
+			&:before {
+				color: $white;
+			}
 		}
 	}
 }

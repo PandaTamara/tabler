@@ -11,9 +11,10 @@
 
     i {
       color: $gray-300;
+      transition: $transition-base;
     }
 
-    :hover i {
+    &:hover i {
       color: $gray-400;
     }
   }

@@ -15,8 +15,9 @@ gulp.task('styles', function () {
             browsers: pckg.browserslist,
             cascade: false
         }))
-        .pipe(rename('dashboard.css'))
-        .pipe(gulp.dest('src/assets/css/'));
+        .pipe(rename('tabler.css'))
+        .pipe(gulp.dest('src/assets/css/'))
+        .pipe(gulp.dest('../umicms-ready-made-solution/html/rms-corporation/src/css/libs'));
 });
 
 gulp.task('styles-plugins', function () {
