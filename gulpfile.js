@@ -5,6 +5,7 @@ var gulp = require('gulp'),
     header = require('gulp-header'),
     fs = require('fs'),
     diff  = require('gulp-css-overrides'),
+    cssDiff = require('@romainberger/css-diff'),
     pckg = require('./package.json');
 
 /**
@@ -15,6 +16,15 @@ var themes = fs.readdirSync('src/assets/scss/colors/').filter(function(elem) {
         return true;
     }
 });
+
+/**
+ * TODO
+ * @type {{bootstrapDir: string, publicDir: string}}
+ */
+var config = {
+    bootstrapDir: './bower_components/bootstrap-sass',
+    publicDir: './public',
+};
 
 /**
  * Генерация базового стиля. В качестве цветов используются базовые стили bootstrap
@@ -30,9 +40,10 @@ gulp.task('core', function () {
             browsers: pckg.browserslist,
             cascade: false
         }))
+        //.pipe(cssDiff('src/assets/css/colors/_black.css'))
         .pipe(rename('tabler.css'))
         .pipe(gulp.dest('src/assets/css/'))
-    ;
+        .pipe(gulp.dest('../umicms-ready-made-solution/html/rms-corporation/src/css/libs'));
 });
 
 /**
@@ -57,7 +68,8 @@ gulp.task('colors', function () {
                 })
             )
             .pipe(rename(themes[i].split('.')[0] + '.css'))
-            .pipe(gulp.dest('src/assets/css/colors/'));
+            .pipe(gulp.dest('src/assets/css/colors/'))
+            .pipe(gulp.dest('../umicms-ready-made-solution/html/rms-corporation/src/css/libs/colors'));
     }
 
     // После того, как схема сформирована удаляем цвета из базы

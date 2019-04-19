@@ -7,6 +7,7 @@ _site/
 .DS_Store
 /_test/
 src/assets/css/*.css
+src/assets/css/colors/*.css
 src/assets/plugins/**/plugin.css
 src/assets/plugins/**/plugin.min.css
 generated-site
