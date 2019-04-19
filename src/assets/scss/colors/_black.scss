@@ -37,8 +37,3 @@ $dark: $gray-800;
 
 $body-bg: #f5f7fb;
 $body-color: $gray-700;
-
-/**
-	Исключает стандартные цвета Bootstrap
- */
-$colors: map-remove($colors, "indigo", "blue", "purple", "pink", "orange", "yellow", "teal", "cyan");

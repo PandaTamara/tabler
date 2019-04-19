@@ -4,17 +4,45 @@ var gulp = require('gulp'),
     autoprefixer = require('gulp-autoprefixer'),
     header = require('gulp-header'),
     fs = require('fs'),
+    diff  = require('gulp-css-overrides'),
     pckg = require('./package.json');
 
-var themes = [
-    'blue',
-    'black'
-];
+/**
+ * Папка с файлами, в которых хранятся цветовые переменные для тем
+ */
+var themes = fs.readdirSync('src/assets/scss/colors/').filter(function(elem) {
+    if (elem !== 'default.scss') {
+        return true;
+    }
+});
 
-gulp.task('styles', function () {
+/**
+ * Генерация базового стиля. В качестве цветов используются базовые стили bootstrap
+ */
+gulp.task('core', function () {
+    gulp.src('src/assets/scss/bundle.scss', {base: '.'})
+        .pipe(header(fs.readFileSync('src/assets/scss/colors/default.scss'), {}))
+        .pipe(sass({
+            precision: 8,
+            outputStyle: 'expanded'
+        }).on('error', sass.logError))
+        .pipe(autoprefixer({
+            browsers: pckg.browserslist,
+            cascade: false
+        }))
+        .pipe(rename('tabler.css'))
+        .pipe(gulp.dest('src/assets/css/'))
+    ;
+});
+
+/**
+ * Для каждого цвета сначала генерируется полноценный tabler с цветом
+ * Потом в результате сравнения оставляются только нужные цвета
+ */
+gulp.task('colors', function () {
     for (var i = 0; i < themes.length; i++) {
         gulp.src('src/assets/scss/bundle.scss', {base: '.'})
-            .pipe(header(fs.readFileSync('src/assets/scss/colors/_' + themes[i] + '.scss'), {}))
+            .pipe(header(fs.readFileSync('src/assets/scss/colors/' + themes[i]), {}))
             .pipe(sass({
                 precision: 8,
                 outputStyle: 'expanded'
@@ -23,10 +51,16 @@ gulp.task('styles', function () {
                 browsers: pckg.browserslist,
                 cascade: false
             }))
-            .pipe(rename('tabler-' + themes[i] + '.css'))
-            .pipe(gulp.dest('src/assets/css/'))
-            .pipe(gulp.dest('../umicms-ready-made-solution/html/rms-corporation/src/css/libs'));
+            .pipe(
+                diff({
+                    basefile: 'src/assets/css/tabler.css'
+                })
+            )
+            .pipe(rename(themes[i].split('.')[0] + '.css'))
+            .pipe(gulp.dest('src/assets/css/colors/'));
     }
+
+    // После того, как схема сформирована удаляем цвета из базы
 });
 
 
@@ -46,9 +80,11 @@ gulp.task('styles-plugins', function () {
         .pipe(gulp.dest('.'));
 });
 
-gulp.task('watch', ['styles', 'styles-plugins'], function() {
+
+gulp.task('watch', ['colors', 'styles-plugins'], function() {
     gulp.watch('src/assets/scss/**/*.scss', ['styles']);
     gulp.watch('src/assets/plugins/**/*.scss', ['styles-plugins']);
 });
 
-gulp.task('default', ['styles', 'styles-plugins']);
+//'styles-plugins'
+gulp.task('default', ['core', 'colors']);
