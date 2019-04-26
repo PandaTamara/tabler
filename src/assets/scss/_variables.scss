@@ -12,6 +12,7 @@ $enable-print-styles: true;
 //Fonts
 $font-family-base: Arial, sans-serif;
 $font-family-monospace: Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+$font-family-icon: "Font Awesome 5 Free";
 
 $font-size-base: .9375rem;
 $font-size-lg: 1.125rem;
@@ -120,9 +121,7 @@ $input-btn-focus-box-shadow:  0 0 0 $input-btn-focus-width $input-btn-focus-colo
 
 $input-disabled-bg: $gray-100;
 
-$input-focus-width: 2px;
-$input-focus-border-color: $primary;
-$input-focus-box-shadow:  0 0 0 $input-focus-width rgba($input-focus-border-color, .25) ;
+
 
 $custom-select-focus-border-color: $primary;
 
@@ -145,6 +144,10 @@ $input-group-addon-border-color: $input-border-color;
 $input-group-addon-bg: #fbfbfc;
 
 $input-placeholder-color: $gray-500;
+
+$input-focus-width: 0px;
+$input-focus-border-color: $border-color-dark;
+$input-focus-box-shadow:  0 0 0 $input-focus-width rgba($input-focus-border-color, .25) ;
 
 // Grid
 $grid-columns: 12;
