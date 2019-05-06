@@ -43,7 +43,8 @@ gulp.task('core', function () {
         //.pipe(cssDiff('src/assets/css/colors/_black.css'))
         .pipe(rename('tabler.css'))
         .pipe(gulp.dest('src/assets/css/'))
-        .pipe(gulp.dest('../umicms-ready-made-solution/html/rms-corporation/src/css/libs'));
+        .pipe(gulp.dest('../umicms-ready-made-solution/html/rms-corporation/src/css/libs'))
+        .pipe(gulp.dest('../umicms-ready-made-solution/templates/rmsCorporation/dist/css/libs/'));
 });
 
 /**
@@ -69,7 +70,8 @@ gulp.task('colors', function () {
             )
             .pipe(rename(themes[i].split('.')[0] + '.css'))
             .pipe(gulp.dest('src/assets/css/colors/'))
-            .pipe(gulp.dest('../umicms-ready-made-solution/html/rms-corporation/src/css/libs/colors'));
+            .pipe(gulp.dest('../umicms-ready-made-solution/html/rms-corporation/src/css/libs/colors'))
+            .pipe(gulp.dest('../umicms-ready-made-solution/templates/rmsCorporation/dist/css/libs/colors'));
     }
 
     // После того, как схема сформирована удаляем цвета из базы
