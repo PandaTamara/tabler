@@ -5,6 +5,7 @@ var gulp = require('gulp'),
     header = require('gulp-header'),
     fs = require('fs'),
     diff  = require('gulp-css-overrides'),
+    grader = require('gulp-css-grader'),
     cssDiff = require('@romainberger/css-diff'),
     pckg = require('./package.json');
 
@@ -40,6 +41,9 @@ gulp.task('core', function () {
             browsers: pckg.browserslist,
             cascade: false
         }))
+        .pipe(grader('remove', {
+            properties: ['color', 'background-color', 'border-color', 'background', 'box-shadow', 'border']
+        }))
         //.pipe(cssDiff('src/assets/css/colors/_black.css'))
         .pipe(rename('tabler.css'))
         .pipe(gulp.dest('src/assets/css/'))
@@ -63,11 +67,14 @@ gulp.task('colors', function () {
                 browsers: pckg.browserslist,
                 cascade: false
             }))
-            .pipe(
+            .pipe(grader('get', {
+                properties: ['color', 'background-color', 'border-color', 'background', 'box-shadow', 'border']
+            }))
+            /*.pipe(
                 diff({
                     basefile: 'src/assets/css/tabler.css'
                 })
-            )
+            )*/
             .pipe(rename(themes[i].split('.')[0] + '.css'))
             .pipe(gulp.dest('src/assets/css/colors/'))
             .pipe(gulp.dest('../umicms-ready-made-solution/html/rms-corporation/src/css/libs/colors'))

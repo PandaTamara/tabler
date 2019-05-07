@@ -47,6 +47,7 @@
   },
   "dependencies": {
     "css-diff": "^0.4.1",
+    "gulp-css-grader": "^1.0.0",
     "gulp-css-overrides": "0.0.9-beta",
     "gulp-sourcemaps": "^2.6.5",
     "opencollective": "^1.0.3"
