@@ -34,11 +34,29 @@
 
 	.nav-item {
 		position: relative;
+
+		&:hover {
+			> .nav-submenu {
+				visibility: visible;
+				transform: translate3d(0, 0, 0);
+				opacity: 1;
+			}
+		}
+
+		&:last-child {
+			.nav-submenu {
+				.nav-item {
+					.nav-submenu {
+						right: 100%;
+						left: auto;
+					}
+				}
+			}
+		}
 	}
 
 	.nav-link {
 		color: inherit;
-		display: inline-block;
 
 		&.active,
 		&:hover {
@@ -48,13 +66,14 @@
 
 	.nav-submenu {
 		position: absolute;
-		z-index: 999;
+		z-index: 10;
 		top: 100%;
 		left: -1rem;
 		visibility: hidden;
 		min-width: 15rem;
 		padding: 1rem 0;
 		transition: transform .3s ease, opacity .3s ease, visibility .3s ease;
+
 		transform: translate3d(0, 1rem, 0);
 		opacity: 0;
 		border-radius: $border-radius;
@@ -67,22 +86,23 @@
 				left: 100%;
 				top: 0;
 				margin: -1rem 4px 0;
+
+
+
+				&::before {
+					top: 0;
+					right: 100%;
+					width: 4px;
+					height: 100%;
+					position: absolute;
+					content: "";
+				}
 			}
 
 			&:hover > .nav-link {
 				color: $primary;
 				background: $white;
 			}
-
-			/*&:before {
-				top: 0;
-				right: 100%;
-				bottom: auto;
-				left: auto;
-
-				width: 4px;
-				height: 100%;
-			}*/
 		}
 
 		.nav-link {
@@ -162,12 +182,6 @@
 			width: px2rem(14px);
 			vertical-align: baseline;
 			display: inline-block;
-		}
-
-		&:hover {
-			.nav-submenu {
-				display: block;
-			}
 		}
 	}
 

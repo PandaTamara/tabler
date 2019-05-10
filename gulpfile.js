@@ -4,9 +4,8 @@ var gulp = require('gulp'),
     autoprefixer = require('gulp-autoprefixer'),
     header = require('gulp-header'),
     fs = require('fs'),
-    diff  = require('gulp-css-overrides'),
     grader = require('gulp-css-grader'),
-    cssDiff = require('@romainberger/css-diff'),
+    cleanCSS = require('gulp-clean-css'),
     pckg = require('./package.json');
 
 /**
@@ -37,14 +36,16 @@ gulp.task('core', function () {
             precision: 8,
             outputStyle: 'expanded'
         }).on('error', sass.logError))
-        .pipe(autoprefixer({
+        /*.pipe(autoprefixer({
             browsers: pckg.browserslist,
             cascade: false
-        }))
+        }))*/
         .pipe(grader('remove', {
             properties: ['color', 'background-color', 'border-color', 'background', 'box-shadow', 'border']
         }))
-        //.pipe(cssDiff('src/assets/css/colors/_black.css'))
+        .pipe(cleanCSS({
+            level: 2
+        }))
         .pipe(rename('tabler.css'))
         .pipe(gulp.dest('src/assets/css/'))
         .pipe(gulp.dest('../umicms-ready-made-solution/html/rms-corporation/src/css/libs'))
@@ -70,11 +71,20 @@ gulp.task('colors', function () {
             .pipe(grader('get', {
                 properties: ['color', 'background-color', 'border-color', 'background', 'box-shadow', 'border']
             }))
-            /*.pipe(
-                diff({
-                    basefile: 'src/assets/css/tabler.css'
-                })
-            )*/
+            /*.pipe(cleanCSS({
+                level: {
+                    1: {
+                        all: false,
+                        //removeDuplicateRules: true // turns on removing duplicate rules
+                    },
+                    2: {
+                        all: false,
+                        restructureRules: true,
+                        mergeSemantically: true,
+                        //removeDuplicateRules: true // turns on removing duplicate rules
+                    }
+                }
+            }))*/
             .pipe(rename(themes[i].split('.')[0] + '.css'))
             .pipe(gulp.dest('src/assets/css/colors/'))
             .pipe(gulp.dest('../umicms-ready-made-solution/html/rms-corporation/src/css/libs/colors'))
