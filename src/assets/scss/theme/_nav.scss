@@ -36,6 +36,10 @@
 		position: relative;
 
 		&:hover {
+			> .nav-link {
+				color: $primary;
+			}
+
 			> .nav-submenu {
 				visibility: visible;
 				transform: translate3d(0, 0, 0);
@@ -58,8 +62,7 @@
 	.nav-link {
 		color: inherit;
 
-		&.active,
-		&:hover {
+		&.active {
 			color: $primary;
 		}
 	}
