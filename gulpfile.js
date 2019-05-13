@@ -69,7 +69,7 @@ gulp.task('colors', function () {
                 cascade: false
             }))
             .pipe(grader('get', {
-                properties: ['color', 'background-color', 'border-color', 'background', 'box-shadow', 'border']
+                properties: ['color', 'background-color', 'border-color', 'background', 'background-image', 'box-shadow', 'border']
             }))
             /*.pipe(cleanCSS({
                 level: {
