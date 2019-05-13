@@ -1,24 +1,27 @@
-.pagination-simple {
-	.page-item {
-		.page-link {
-			background: none;
-			border: none;
-		}
-
-		&.active .page-link {
-			color: $pagination-color;
-			font-weight: 700;
-		}
-	}
+.pagination {
+	margin: -.25rem;
+	flex-wrap: wrap !important;
 }
 
-.pagination-pager {
-	.page-prev {
-		margin-right: auto;
+.pagination {
+	.page-item {
+		margin: .25rem;
 	}
 
-	.page-next {
-		margin-left: auto;
+	.page-link {
+		border-radius: $border-radius;
+	}
+
+	.page-link-next,
+	.page-link-next {
+		min-width: 6.5rem;
+		text-align: center;
+	}
+
+	@media (min-width: 768px) {
+		.page-item {
+			min-width: inherit;
+		}
 	}
 }
 
