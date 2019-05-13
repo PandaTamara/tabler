@@ -10,6 +10,10 @@
 
 	.page-link {
 		border-radius: $border-radius;
+
+		&:hover {
+			color: inherit;
+		}
 	}
 
 	.page-link-next,
