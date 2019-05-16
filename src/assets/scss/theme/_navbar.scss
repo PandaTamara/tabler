@@ -1,0 +1,66 @@
+.navbar-section {
+  padding: 2rem;
+}
+
+/**
+  Canvas off navigation
+ */
+.navbar-canvas {
+  position: fixed;
+  top: 0;
+  left: -100%;
+  width: calc(100% - 2.875rem);
+  height: 100vh;
+  transition: left 300ms ease-in-out;
+  z-index: $zindex-modal-backdrop;
+  max-width: 21rem;
+  overflow-y: scroll;
+
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+
+  &::-webkit-scrollbar {
+    width: 0;
+  }
+
+  &.is-open {
+    left: 0;
+    transition: left 200ms ease;
+
+    + .navbar-canvas-overlay {
+      visibility: visible;
+      opacity: 1;
+    }
+  }
+
+  .nav-item {
+    padding: 0;
+
+    &:not(:last-child) {
+      border-bottom: 1px solid $border-color;
+    }
+  }
+
+  .nav-link {
+    color: inherit;
+    padding: .75rem 0;
+    font-size: .8125rem;
+
+    &:hover {
+      color: $primary;
+    }
+  }
+}
+
+.navbar-canvas-overlay {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 1035;
+  background-color: rgba(0, 0, 0, 0.4);
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.3s ease;
+}
