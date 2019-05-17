@@ -16,13 +16,6 @@
   max-width: 21rem;
   overflow-y: scroll;
 
-  scrollbar-width: none;
-  -ms-overflow-style: none;
-
-  &::-webkit-scrollbar {
-    width: 0;
-  }
-
   &.is-open {
     left: 0;
     transition: left 200ms ease;
