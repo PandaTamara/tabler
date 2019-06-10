@@ -15,12 +15,3 @@
     @include gradient-x(rgba($value, 1), rgba(white, 0), 0%, 100%);
   }
 }
-
-/**
-	Основные цвета цветовые схем темы rmsCorporation
- */
-@each $vendor, $themes-color in $themes {
-  .bg-theme-#{$vendor} {
-    background-color: #{$themes-color};
-  }
-}

@@ -1,5 +1,5 @@
 // Options
-$enable-rounded: true;
+$enable-rounded: false;
 $enable-shadows: false;
 $enable-gradients: false;
 $enable-transitions: true;
@@ -40,19 +40,12 @@ $display2-size: 4rem;
 $display3-size: 3.5rem;
 $display4-size: 3rem;
 
-/**
-	Цвета, которые будут использоваться
-*/
-$colors: (
-	"red": $red,
-	"green": $green,
-	"white": $white,
-	"gray": $gray-600,
-	"gray-dark": $gray-800
-);
+$orange: #e64b3b;
+$primary: #333;
+$secondary: #f7f7f7;
 
-$colors: map-remove($colors, "indigo", "blue", "purple", "pink", "orange", "yellow", "teal", "cyan");
-
+$body-bg:                   $secondary !default;
+$body-color:                $primary !default;
 
 $theme-colors: (
 	"primary": $primary,
@@ -65,19 +58,6 @@ $theme-colors: (
 	"dark": $dark
 );
 
-/**
-	Из этого массива собираются примеры цветов,
-	которые используются в шаблоне
- */
-$themes: (
-				"blue" : #467fcf,
-				"purple": #4646CF,
-				"pink": #CE1867,
-				"red": #E10000,
-				"navyblue": #1A5694,
-				"green": #00B600,
-				"aquamarine": #1BA7B9
-);
 
 $social-colors: (
 	"facebook": #3b5998,
@@ -180,6 +160,7 @@ $header-height: 4.5rem;
 
 // Cards
 $card-border-color: $border-color;
+$card-border-width: 0;
 $card-spacer-y: 1.5rem;
 $card-spacer-x: 1.5rem;
 
@@ -224,7 +205,7 @@ $footer-bg: #fff;
 
 // Dropdowns
 $dropdown-border-color: $border-color;
-$dropdown-box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
+$dropdown-box-shadow: 0;
 
 // Z-index
 $zindex-overlay: 900;

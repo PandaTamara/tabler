@@ -36,7 +36,7 @@
 
 		&:hover {
 			> .nav-link {
-				color: $primary;
+				color: $orange;
 			}
 
 			> .nav-submenu {
@@ -62,7 +62,7 @@
 		color: inherit;
 
 		&.active {
-			color: $primary;
+			color: $orange;
 		}
 	}
 
@@ -78,7 +78,7 @@
 
 		transform: translate3d(0, 1rem, 0);
 		opacity: 0;
-		border-radius: $border-radius;
+		border-radius: 0;
 		background: darken($gray-100, 2.5);
 
 		.nav-item {
@@ -102,7 +102,7 @@
 			}
 
 			&:hover > .nav-link {
-				color: $primary;
+				color: $orange;
 				background: $white;
 			}
 		}
