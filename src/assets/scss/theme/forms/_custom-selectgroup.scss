@@ -58,17 +58,20 @@
 
 .selectgroup-button {
 	display: block;
-	border: 1px solid $input-border-color;
+	border: 1px solid #aeb2b2;
 	text-align: center;
 	padding: $input-btn-padding-y 1rem;
 	position: relative;
 	cursor: pointer;
-	border-radius: 3px;
-	color: $text-muted;
+	border-radius: 0;
+	text-transform: uppercase;
+	font-weight: bold;
+	color: #aeb2b2;
 	user-select: none;
-	font-size: $font-size-base;
+	font-size: $h4-font-size;
 	line-height: 1.5rem;
 	min-width: $input-height;
+	letter-spacing: .05em !important;
 }
 
 .selectgroup-button-icon {
@@ -80,14 +83,14 @@
 .selectgroup-input:checked + .selectgroup-button {
 	border-color: $primary;
 	z-index: 1;
-	color: $primary;
-	background: mix(#fff, $primary, 90%)
+	color: $black;
+	background: $primary
 }
 
 .selectgroup-input:focus + .selectgroup-button {
 	border-color: $primary;
 	z-index: 2;
-	color: $primary;
+	color: $black;
 	box-shadow: $input-btn-focus-box-shadow;
 }
 
