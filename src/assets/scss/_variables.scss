@@ -14,6 +14,8 @@ $font-family-base: Arial, sans-serif;
 $font-family-monospace: Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
 $font-family-icon: "Font Awesome 5 Free";
 
+$font-weight-base: 300;
+
 $font-size-base: .9375rem;
 $font-size-lg: 1.125rem;
 $font-size-sm: .875rem;
@@ -31,14 +33,14 @@ $small-font-size: 87.5%;
 
 $headings-margin-bottom: .66em;
 $headings-font-family: inherit;
-$headings-font-weight: 600;
+$headings-font-weight: 300;
 $headings-line-height: 1.1;
 $headings-color: inherit;
 
 $display1-size: 4.5rem;
 $display2-size: 4rem;
 $display3-size: 3.5rem;
-$display4-size: 3rem;
+$display4-size: 2.75rem;
 
 $orange: #e64b3b;
 $primary: #333;
@@ -161,8 +163,8 @@ $header-height: 4.5rem;
 // Cards
 $card-border-color: $border-color;
 $card-border-width: 0;
-$card-spacer-y: 1.5rem;
-$card-spacer-x: 1.5rem;
+$card-spacer-y: 2.2rem;
+$card-spacer-x: 2.2rem;
 
 // Alerts
 $alert-link-font-weight: 600;

@@ -23,7 +23,7 @@
 	 */
 	> .nav-item {
 		> .nav-link {
-			font-weight: bold;
+			font-weight: 500;
 			font-size: .8125rem;
 
 			padding: .6rem 0;
@@ -143,7 +143,7 @@
 		color: inherit;
 		margin-bottom: -1px;
 		transition: .3s all;
-		font-weight: 700;
+		font-weight: 500;
 		font-size: $h6-font-size;
 		padding: 1rem 0;
 		position: relative;

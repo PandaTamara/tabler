@@ -26,3 +26,7 @@
 
 .text-white-25 { color: rgba($white, .25) !important; }
 .text-white-75 { color: rgba($white, .75) !important; }
+
+.small, small {
+	font-weight: 300;
+}
