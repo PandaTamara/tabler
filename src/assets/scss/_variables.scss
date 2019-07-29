@@ -50,7 +50,7 @@ $colors: (
 	"red": $red,
 	"green": $green,
 	"white": $white,
-	"gray": $gray-600,
+	"gray": #aeb2b2,
 	"gray-dark": $gray-800
 );
 
@@ -73,14 +73,14 @@ $theme-colors: (
 	которые используются в шаблоне
  */
 $themes: (
-				"blue" : #467fcf,
-				"purple": #4646CF,
-				"pink": #CE1867,
-				"red": #E10000,
-				"navyblue": #1A5694,
-				"green": #00B600,
-				"aquamarine": #1BA7B9,
-		"yellow": #f1c40f
+		"blue" : #467fcf,
+		"purple": #4646CF,
+		"pink": #CE1867,
+		"red": #E10000,
+		"navyblue": #1A5694,
+		"green": #00B600,
+		"aquamarine": #1BA7B9,
+		"yellow": #f6d04c
 );
 
 $social-colors: (
@@ -122,7 +122,7 @@ $btn-line-height-sm: (16/12);
 $input-line-height-lg: (26/18);
 $btn-line-height-lg: (26/16);
 
-$btn-transition: color .3s ease-in-out, background-color .3s ease-in-out, border-color .3s ease-in-out, box-shadow .3s ease-in-out;
+$btn-transition: color .5s ease-in-out, background-color .5s ease-in-out, border-color .5s ease-in-out, box-shadow .5s ease-in-out;
 
 $input-btn-padding-y:         .75rem !default;
 $input-btn-focus-width: 0px;

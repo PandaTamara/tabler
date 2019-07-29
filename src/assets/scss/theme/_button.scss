@@ -64,9 +64,13 @@
 }
 
 .btn-lg {
-	font-size: px2rem(16px);
+	font-size: $h4-font-size;
 	min-width: px2rem(44px);
-	font-weight: 400;
+	font-weight: 700;
+	letter-spacing: .05em;
+	text-transform: uppercase;
+
+	padding: .75rem 2.5rem !important;
 
 	i {
 		font-size: 1.1rem;

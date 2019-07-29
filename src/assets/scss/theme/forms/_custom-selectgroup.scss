@@ -60,7 +60,7 @@
 	display: block;
 	border: 1px solid #aeb2b2;
 	text-align: center;
-	padding: $input-btn-padding-y 1rem;
+	padding: 1.1rem 1.5rem;
 	position: relative;
 	cursor: pointer;
 	border-radius: 0;
@@ -72,6 +72,7 @@
 	line-height: 1.5rem;
 	min-width: $input-height;
 	letter-spacing: .05em !important;
+	transition: $transition-base;
 }
 
 .selectgroup-button-icon {
@@ -83,14 +84,14 @@
 .selectgroup-input:checked + .selectgroup-button {
 	border-color: $primary;
 	z-index: 1;
-	color: $black;
-	background: $primary
+	color: $primary;
+	background: rgba($primary, .15)
 }
 
 .selectgroup-input:focus + .selectgroup-button {
-	border-color: $primary;
+	/*border-color: $primary;*/
 	z-index: 2;
-	color: $black;
+	/*color: $black;*/
 	box-shadow: $input-btn-focus-box-shadow;
 }
 
@@ -99,7 +100,7 @@
 	align-items: flex-start;
 
 	.selectgroup-item {
-		margin-right: .5rem;
+		margin-right: 0.75rem;
 		flex-grow: 0;
 	}
 
