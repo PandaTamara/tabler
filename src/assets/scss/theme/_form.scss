@@ -12,14 +12,34 @@ textarea {
 .form-label {
 	display: block;
 	margin-bottom: .375rem;
-	font-weight: 600;
-	font-size: px2rem(14px);
+	font-size: 0.785rem;
+	font-weight: 300;
 }
 
 .form-label-small {
 	float: right;
 	font-weight: 400;
 	font-size: $small-font-size;
+}
+
+.form-control {
+	font-size: 1rem;
+	padding: 0 1rem;
+	font-weight: 300;
+}
+
+.form-control:focus {
+	border-color: $green;
+}
+
+.form-row {
+	margin-right: -15px;
+	margin-left: -15px;
+
+	> .col, > [class*="col-"] {
+		padding-right: 15px;
+		padding-left: 15px;
+	}
 }
 
 .form-footer {
@@ -41,6 +61,7 @@ textarea {
 		margin-bottom: .25rem;
 	}
 }
+
 
 .custom-control-label {
 	vertical-align: middle;

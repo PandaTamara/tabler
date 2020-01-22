@@ -10,8 +10,8 @@ $enable-print-styles: true;
 
 
 //Fonts
-$font-family-base: Arial, sans-serif;
-$font-family-monospace: Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+$font-family-base: RocketSans, Helvetica, "Helvetica Neue", Arial, sans-serif;
+$font-family-monospace: RocketSans, Helvetica, "Helvetica Neue", Arial, sans-serif;
 $font-family-icon: "Font Awesome 5 Free";
 
 $font-size-base: .9375rem;
@@ -20,9 +20,9 @@ $font-size-sm: .875rem;
 
 $line-height-base: 1.5;
 
-$h1-font-size: 2rem; //32px
+$h1-font-size: 2.5rem; //40px
 $h2-font-size: 1.75rem; //28px
-$h3-font-size: 1.5rem; //24px
+$h3-font-size: 1.625rem; //26px
 $h4-font-size: 1.125rem; //18px
 $h5-font-size: 1rem; //16px
 $h6-font-size: .875rem; //14px
@@ -31,7 +31,7 @@ $small-font-size: 87.5%;
 
 $headings-margin-bottom: .66em;
 $headings-font-family: inherit;
-$headings-font-weight: 600;
+$headings-font-weight: 700;
 $headings-line-height: 1.3;
 $headings-color: inherit;
 
@@ -95,7 +95,7 @@ $social-colors: (
 );
 
 // Link
-$link-color: $primary;
+$link-color: $green;
 $link-hover-color: darken($link-color, 15%);
 $link-hover-decoration: none;
 
@@ -138,16 +138,16 @@ $custom-select-focus-border-color: $primary;
 // Borders
 $border-width: 1px;
 //$border-color: #dee3eb;
-$border-color: rgba(0, 40, 100, .12);
+$border-color: #bebebe;
 $border-color-dark: rgba(0, 40, 100, .24);
 
 // Inputs
 $input-bg: #fff;
-$input-height: 2.375rem;
+$input-height: 3rem;
 
 $input-color: $gray-700;
 $input-border-color: $border-color;
-$input-border-width: 1px;
+$input-border-width: 2px;
 $input-box-shadow: inset 0 1px 1px rgba(#000, .075);
 
 $input-group-addon-border-color: $input-border-color;
@@ -161,21 +161,21 @@ $input-focus-box-shadow:  0 0 0 $input-focus-width rgba($input-focus-border-colo
 
 // Grid
 $grid-columns: 12;
-$grid-gutter-width: 1.5rem;
+$grid-gutter-width: 2rem;
 
 $grid-breakpoints: (
 	xs: 0,
 	sm: 576px,
 	md: 768px,
 	lg: 992px,
-	xl: 1280px
+	xl: 1220px
 );
 
 $container-max-widths: (
 	sm: 540px,
 	md: 720px,
 	lg: 960px,
-	xl: 1200px
+	xl: 1140px
 );
 
 // Header
@@ -242,8 +242,8 @@ $zindex-popover: 1070;
 $zindex-tooltip: 1080;
 
 // Components
-$border-radius: 3px;
-$border-radius-lg: 3px;
+$border-radius: 4px;
+$border-radius-lg: 4px;
 $border-radius-sm: 3px;
 
 // Tables

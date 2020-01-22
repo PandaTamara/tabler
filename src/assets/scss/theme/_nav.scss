@@ -23,11 +23,10 @@
 	 */
 	> .nav-item {
 		> .nav-link {
-			font-weight: bold;
-			font-size: .8125rem;
+			font-weight: 500;
 
 			padding: .6rem 0;
-			text-transform: uppercase;
+			text-transform: capitalize;
 		}
 	}
 
@@ -36,7 +35,7 @@
 
 		&:hover {
 			> .nav-link {
-				color: $primary;
+				color: $green;
 			}
 
 			> .nav-submenu {
@@ -62,7 +61,7 @@
 		color: inherit;
 
 		&.active {
-			color: $primary;
+			color: $green;
 		}
 	}
 
@@ -72,14 +71,15 @@
 		top: 100%;
 		left: -1rem;
 		visibility: hidden;
-		min-width: 15rem;
+		min-width: 17rem;
 		padding: 1rem 0;
 		transition: transform .3s ease, opacity .3s ease, visibility .3s ease;
 
 		transform: translate3d(0, 1rem, 0);
 		opacity: 0;
 		border-radius: $border-radius;
-		background: darken($gray-100, 2.5);
+		background: #fff;
+		border: 1px solid $border-color;
 
 		.nav-item {
 			padding: 0;
@@ -102,8 +102,7 @@
 			}
 
 			&:hover > .nav-link {
-				color: $primary;
-				background: $white;
+				color: $green;
 			}
 		}
 
