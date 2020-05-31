@@ -1,13 +1,16 @@
 .btn {
 	cursor: pointer;
-	font-weight: 600;
-	letter-spacing: .03em;
+	font-weight: 500;
 	font-size: px2rem(13px);
 	min-width: px2rem(38px);
 
 	i {
 		font-size: 1rem;
 		vertical-align: -2px;
+	}
+
+	&:focus {
+		outline: none;
 	}
 }
 
@@ -64,9 +67,11 @@
 }
 
 .btn-lg {
-	font-size: px2rem(16px);
-	min-width: px2rem(44px);
-	font-weight: 400;
+	font-size: 1rem;
+	min-width: 2.75rem;
+
+	height: calc(2em + 1rem + 2px);
+	line-height: 2;
 
 	i {
 		font-size: 1.1rem;

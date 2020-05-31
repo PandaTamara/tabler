@@ -2,3 +2,27 @@
 {
 	content: 'Обзор';
 }
+
+.custom-file-lg {
+	height: calc(2em + 1rem + 2px);
+	line-height: 2;
+}
+
+.custom-file-lg .custom-file-input {
+	height: calc(2em + 1rem + 2px);
+}
+
+.custom-file-lg .custom-file-label {
+	height: calc(2em + 1rem + 2px);
+	padding: .5rem 1rem;
+	line-height: 2;
+	color: #868e96;
+}
+
+.custom-file-lg .custom-file-label::after {
+	height: calc(2em + 1rem);
+	line-height: 2;
+	padding: .5rem 1rem;
+	background-color: #e98000;
+	color: white;
+}

@@ -26,10 +26,11 @@ textarea {
 	margin-top: 2rem;
 }
 
-.custom-select,
-.custom-file {
-	//display: block;
-	//width: 100%;
+.form-control-lg {
+	height: calc(2em + 1rem + 2px);
+	line-height: 2;
+	padding: .5rem 1rem;
+	font-size: 1rem;
 }
 
 .custom-control {
@@ -43,7 +44,12 @@ textarea {
 }
 
 .custom-control-label {
+	top: 0;
 	vertical-align: middle;
+
+	&:after {
+		top: 0;
+	}
 
 	&:before {
 		border: 1px solid $input-border-color;

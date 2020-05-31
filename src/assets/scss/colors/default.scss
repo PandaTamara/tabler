@@ -35,7 +35,10 @@ $success:       $green !default;
 $info:          $azure !default;
 $warning:       $yellow !default;
 $danger:        $red !default;
-$light:         $gray-100 !default;
+
+//$light:         $gray-100 !default;
+$light:         #e9ecef !default;
+
 $dark:          $gray-800 !default;
 
 $body-bg:                   $white !default;
