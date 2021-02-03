@@ -17,11 +17,12 @@
     overflow-x: auto;
 
     .breadcrumb-item {
-        color: $white;
+        color: $text-muted;
         flex: 0 0 auto;
+		font-weight: 500;
 
         &.active {
-            color: rgba($white, .75);
+            color: $primary;
             padding-right: 0.85rem;
         }
 
@@ -29,7 +30,7 @@
             color: inherit;
 
             &:hover {
-                color: rgba($white, .75);
+                color: $primary;
             }
         }
 
@@ -40,7 +41,7 @@
                 content: "";
                 padding: 0;
 
-                background: rgba($white, .75);
+                background: rgba($text-muted, .75);
                 vertical-align: middle;
 
                 width: 4px;
@@ -58,7 +59,6 @@
 
     @include media-breakpoint-up(md) {
         padding: 1rem 0;
-        text-transform: uppercase;
     }
 
     @include media-breakpoint-up(sm) {

@@ -4,10 +4,35 @@ textarea {
 	}
 }
 
-
 .form-group {
 	display: block;
+	position: relative;
 }
+
+.form-control {
+	height: 3.125rem;
+	padding: .3rem .75rem;
+}
+
+.form-control-icon + .form-control {
+	padding-left: 3rem;
+}
+
+textarea.form-control {
+	min-height: 7.5rem;
+	padding: .75rem;
+}
+
+.form-control-icon {
+	position: absolute;
+	left: 0;
+	right: 0;
+	padding: .85rem 0 .85rem .375rem;
+	float: left;
+	width: 3rem;
+	text-align: center;
+}
+
 
 .form-label {
 	display: block;
