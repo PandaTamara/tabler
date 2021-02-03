@@ -1,9 +1,12 @@
 .btn {
 	cursor: pointer;
-	font-weight: 600;
-	letter-spacing: .03em;
-	font-size: px2rem(13px);
-	min-width: px2rem(38px);
+	font-weight: 500;
+	font-size: px2rem(15px);
+	min-width: 2.375rem;
+
+	display: inline-flex;
+	align-items: center;
+	justify-content: center;
 
 	i {
 		font-size: 1rem;
@@ -64,13 +67,23 @@
 }
 
 .btn-lg {
-	font-size: px2rem(16px);
-	min-width: px2rem(44px);
-	font-weight: 400;
+	font-size: px2rem(14px);
+	min-width: 2.75rem;
+	font-weight: 500;
+	line-height: 1.75;
+
+	text-transform: uppercase;
+	padding: .75rem 1.5rem;
 
 	i {
 		font-size: 1.1rem;
 		vertical-align: -1px;
+	}
+
+	ion-icon {
+		font-size: 1.075rem;
+		width: 1.075rem;
+		height: 1.075rem;
 	}
 }
 

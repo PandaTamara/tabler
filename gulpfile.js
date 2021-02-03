@@ -27,9 +27,9 @@ gulp.task('core', function () {
         .pipe(cleanCSS({
             level: 2
         }))
-        .pipe(rename('tabler.css'))
+        .pipe(rename('tabler-test.css'))
         .pipe(gulp.dest('src/assets/css/'))
-        .pipe(gulp.dest('../mustang-professional/templates/mustang-professional-theme/dist/css/libs/'));
+        .pipe(gulp.dest('../mustang-professional/html/parimir/app/_src/css/libs/'));
 });
 
 gulp.task('styles-plugins', function () {

@@ -12,6 +12,10 @@
 .text-default { color: $body-color !important; }
 .text-muted-dark { color: $text-muted-dark !important; }
 
+.text-line-through {
+	text-decoration: line-through;
+}
+
 .tracking-tight		{ letter-spacing: -0.05em !important; }
 .tracking-normal	{ letter-spacing: 0 !important; }
 .tracking-wide		{ letter-spacing: 0.05em !important; }

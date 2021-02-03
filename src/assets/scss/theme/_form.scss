@@ -37,7 +37,7 @@ textarea.form-control {
 .form-label {
 	display: block;
 	margin-bottom: .375rem;
-	font-weight: 600;
+	font-weight: 500;
 	font-size: px2rem(14px);
 }
 
@@ -124,7 +124,7 @@ Icon input
 	display: flex;
 	align-items: center;
 	justify-content: center;
-	min-width: 2.5rem;
+	min-width: auto;
 	pointer-events: none;
 
 	&:last-child {
