@@ -27,7 +27,7 @@ $h4-font-size: 1.125rem; //18px
 $h5-font-size: 1rem; //16px
 $h6-font-size: .875rem; //14px
 
-$small-font-size: 87.5%;
+$small-font-size: .75rem;
 
 $headings-margin-bottom: .66em;
 $headings-font-family: inherit;
@@ -79,7 +79,7 @@ $themes: (
 				"lightgreen": #85b82d,
 				"green": #00B600,
 				"aquamarine": #1BA7B9,
-				"yellow": #ffc72c,
+				"yellow": #ffb400,
 				"orange": #F5831F,
 				"cadetblue" : #4f758b
 );
@@ -175,7 +175,7 @@ $container-max-widths: (
 	sm: 540px,
 	md: 720px,
 	lg: 960px,
-	xl: 1200px
+	xl: 1140px
 );
 
 // Header
