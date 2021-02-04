@@ -60,10 +60,6 @@
 
 	.nav-link {
 		color: inherit;
-
-		&.active {
-			color: $primary;
-		}
 	}
 
 	.nav-submenu {
@@ -127,6 +123,7 @@
 	user-select: none;
 	color: $text-muted;
 	margin: 0 -.75rem;
+	border-bottom: 2px solid #dee2e6;
 
 	display: -ms-flexbox;
 	display: flex;
@@ -140,37 +137,39 @@
 		border: 0;
 		border-radius: 0;
 
-		color: inherit;
-		margin-bottom: -1px;
+		color: #babac0;
+		margin-bottom: -2px;
 		transition: .3s all;
-		font-weight: 700;
-		font-size: $h6-font-size;
-		padding: 1rem 0;
+		font-weight: 500;
+		font-size: 1.125rem;
+		padding: .75rem 0;
 		position: relative;
 
 		overflow: hidden;
 
 		white-space: nowrap;
-		text-transform: uppercase;
 		text-overflow: ellipsis;
 
+		&:first-child {
+			margin-left: 0;
+		}
+
 		&:hover:not(.disabled):not(.active) {
-			border-color: $text-muted-dark;
 			color: $text-muted-dark;
 		}
 
 		&.active {
-			border-color: $primary;
 			background: transparent;
+			color: $dark;
 
 			&:after {
 				position: absolute;
 				bottom: 0;
 				left: 0;
 				width: 100%;
-				height: 1px;
+				height: 2px;
 				content: '';
-				background: white;
+				background: $dark;
 			}
 		}
 
@@ -184,6 +183,7 @@
 	.nav-item {
 		margin-bottom: 0;
 		position: relative;
+		padding: 0 1rem;
 
 
 		i {
@@ -193,6 +193,10 @@
 			width: px2rem(14px);
 			vertical-align: baseline;
 			display: inline-block;
+		}
+
+		&:first-child {
+			padding-left: 0;
 		}
 	}
 
