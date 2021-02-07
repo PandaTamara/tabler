@@ -1,5 +1,11 @@
 .dropdown {
 	display: inline-block;
+
+	&.show {
+		.dropdown-menu {
+			display: block;
+		}
+	}
 }
 
 .dropdown-menu {
@@ -8,7 +14,13 @@
 }
 
 .dropdown-item {
-	color: $text-muted-dark;
+	color: $dark;
+	padding: .375rem 1.125rem;
+
+	&:focus,
+	&:hover {
+		background-color: $light;
+	}
 }
 
 .dropdown-menu-arrow {
@@ -65,4 +77,8 @@
 	display: inline-block;
 	text-align: center;
 	vertical-align: -1px;
+}
+
+.dropdown-divider {
+	border-top: 1px solid $border-color;
 }

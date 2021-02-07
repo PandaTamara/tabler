@@ -18,9 +18,11 @@
     overflow-x: auto;
 
     .breadcrumb-item {
-        color: $text-muted;
+        //olor: $text-muted;
+		color: darken($text-muted, 7.5%);
         flex: 0 0 auto;
 		font-weight: 400;
+		letter-spacing: 0.01rem;
 
         &.active {
 
@@ -42,7 +44,7 @@
                 content: "";
                 padding: 0;
 
-                background: rgba($text-muted, .75);
+                background: $text-muted;
 				border-radius: 50%;
                 vertical-align: middle;
 

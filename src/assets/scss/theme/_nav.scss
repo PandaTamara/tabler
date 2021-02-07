@@ -155,7 +155,7 @@
 		}
 
 		&:hover:not(.disabled):not(.active) {
-			color: $text-muted-dark;
+			color: darken($text-muted, 5%);
 		}
 
 		&.active {

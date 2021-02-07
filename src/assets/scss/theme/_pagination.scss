@@ -34,3 +34,7 @@
 	align-self: center;
 	color: $text-muted-dark;
 }
+
+.page-item.active .page-link {
+	color: $dark;
+}
