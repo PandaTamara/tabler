@@ -48,8 +48,7 @@ gulp.task('core', function () {
         }))
         .pipe(rename('tabler.css'))
         .pipe(gulp.dest('src/assets/css/'))
-        .pipe(gulp.dest('../umicms-ready-made-solution/html/rms-corporation/src/css/libs'))
-        .pipe(gulp.dest('../umicms-ready-made-solution/templates/rmsCorporation/dist/css/libs/'));
+        .pipe(gulp.dest('../arhimed-tech/templates/airar/dist/css/libs/'));
 });
 
 /**
@@ -71,24 +70,9 @@ gulp.task('colors', function () {
             .pipe(grader('get', {
                 properties: ['color', 'background-color', 'border-color', 'background', 'background-image', 'box-shadow', 'border']
             }))
-            /*.pipe(cleanCSS({
-                level: {
-                    1: {
-                        all: false,
-                        //removeDuplicateRules: true // turns on removing duplicate rules
-                    },
-                    2: {
-                        all: false,
-                        restructureRules: true,
-                        mergeSemantically: true,
-                        //removeDuplicateRules: true // turns on removing duplicate rules
-                    }
-                }
-            }))*/
             .pipe(rename(themes[i].split('.')[0] + '.css'))
             .pipe(gulp.dest('src/assets/css/colors/'))
-            .pipe(gulp.dest('../umicms-ready-made-solution/html/rms-corporation/src/css/libs/colors'))
-            .pipe(gulp.dest('../umicms-ready-made-solution/templates/rmsCorporation/dist/css/libs/colors'));
+            .pipe(gulp.dest('../arhimed-tech/templates/airar/dist/css/libs/colors'));
     }
 
     // После того, как схема сформирована удаляем цвета из базы
